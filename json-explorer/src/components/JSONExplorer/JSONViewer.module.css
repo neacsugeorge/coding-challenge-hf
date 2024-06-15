@@ -1,0 +1,27 @@
+.root {
+    color: #424242;
+}
+
+.content {
+    border: 1px solid #BDBDBD;
+    border-radius: 6px;
+    padding: 16px;
+    font-family: 'Fira Mono', monospace;
+    overflow: auto;
+}
+
+.property:last-child > .comma {
+    display: none;
+}
+
+.accessibleProperty a {
+    color: #3b6ec3;
+    cursor: pointer;
+}
+.accessibleProperty a:hover {
+    text-decoration: underline;
+}
+
+.indent {
+    margin-left: 16px;
+}

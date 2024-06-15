@@ -1,0 +1,18 @@
+.root {
+    color: #424242;
+}
+
+.input {
+    display: block;
+    padding: 12px 10px;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    min-width: 200px;
+    margin-top: 4px;
+    font-family: "Fira Mono", monospace;
+}
+
+.result {
+    font-family: "Fira Mono", monospace;
+    margin-top: 4px;
+}

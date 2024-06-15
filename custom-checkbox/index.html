@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Custom Checkbox Challenge</title>
+        <style>
+            input[type=checkbox] {
+                --size: 24px;
+                --color: #282828;
+
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                width: var(--size);
+                height: var(--size);
+                border-radius: 6px;
+                border: 1px solid var(--color);
+                outline-offset: 4px;
+                outline-color: #1a18c6;
+            }
+            input[type=checkbox]:checked {
+                background-color: var(--color);
+                background-image: url('./check.svg');
+            }
+        </style>
+    </head>
+    <body>
+        <input type="checkbox" />
+    </body>
+</html>
