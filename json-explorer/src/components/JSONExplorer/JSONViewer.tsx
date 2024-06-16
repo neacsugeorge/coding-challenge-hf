@@ -14,6 +14,7 @@ function PropertyContents({
     onChangePath: (path: string) => void,
 }) {
     const isIterable = (typeof value === 'object' && value);
+    const isArrayValue = Array.isArray(value);
 
     return (
         <div className={clsx(styles.property, {
@@ -34,7 +35,7 @@ function PropertyContents({
                 <span>{typeof value === 'string' ? `'${value}'` : JSON.stringify(value)}</span>
             ) : (
                 <>
-                    <span>{Array.isArray(value) ? '[' : '{'}</span>
+                    <span>{isArrayValue ? '[' : '{'}</span>
                     <div className={styles.indent}>
                         <IterablePropertyContents
                             path={path}
@@ -42,7 +43,7 @@ function PropertyContents({
                             onChangePath={onChangePath}
                         />
                     </div>
-                    <span>{Array.isArray(value) ? ']' : '}'}</span>
+                    <span>{isArrayValue ? ']' : '}'}</span>
                 </>
             )}
             <span className={styles.comma}>,</span>

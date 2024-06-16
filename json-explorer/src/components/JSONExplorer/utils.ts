@@ -31,5 +31,10 @@ export function previewValueAtPath(jsonData: object, path: string): string {
         value = '\'\'';
     }
 
+    // Handle null value
+    if (value === null) {
+        value = 'null';
+    }
+
     return value.toString();
 }

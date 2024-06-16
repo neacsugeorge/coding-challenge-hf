@@ -9,6 +9,7 @@ describe('previewValueAtPath', () => {
         number: 1234,
         boolean: false,
         object: {},
+        null: null as string,
     };
 
     test('should return \'undefined\' if path doesn\'t start with res', () => {
@@ -31,5 +32,8 @@ describe('previewValueAtPath', () => {
     });
     test('should return boolean value correctly', () => {
         expect(previewValueAtPath(jsonData, 'res.boolean')).toBe('false');
+    });
+    test('should return null correctly', () => {
+        expect(previewValueAtPath(jsonData, 'res.null')).toBe('null');
     });
 });
